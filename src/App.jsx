@@ -57,6 +57,8 @@ export default function Portfolio() {
           </p>
           <div className="mt-8 flex gap-4">
             <button className="px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 shadow-xl">
+              <a href="/Temesgen_Meri_Resume.pdf" target="_blank" rel="noopener noreferrer">
+  </a>
               Download Resume
             </button>
           </div>
