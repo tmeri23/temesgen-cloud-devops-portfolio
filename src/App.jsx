@@ -1,142 +1,166 @@
 import { motion } from "framer-motion";
+import React from "react";
 
-export default function Portfolio() {
-  const skills = {
-    "Cloud Platforms": ["AWS", "Microsoft Azure", "Google Cloud Platform (GCP)"],
-    "DevOps & Automation": ["Jenkins", "GitHub Actions", "Terraform", "CI/CD Pipelines", "Ansible"],
-    "Containers & Orchestration": ["Docker", "Kubernetes", "Helm"],
-    "Scripting & Programming": ["Python", "Bash", "PowerShell", "YAML"],
-    "Systems & Networking": ["Windows Server", "Linux", "DNS", "DHCP", "VPN", "Load Balancing"],
-    "Security & Governance": ["Microsoft Defender", "Microsoft Purview", "IAM", "Cloud Security"]
-  };
+function App() {
+  const skills = [
+    "AWS",
+    "Azure",
+    "GCP",
+    "Terraform",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "GitHub Actions",
+    "Python",
+    "PowerShell",
+    "Linux",
+  ];
 
   const projects = [
     {
-      title: "Cloud DevOps Portfolio Website",
-      desc: "Designed and deployed a fully responsive professional portfolio website using React, Vite, GitHub, and Vercel.",
-      icon: <span>💻</span>
+      title: "AWS Enterprise Landing Zone",
+      desc: "Designed and deployed a secure multi-account AWS landing zone using AWS Organizations, SCPs, IAM governance, centralized logging, and Terraform modules.",
+      tech: "AWS • Terraform • IAM • SCP • VPC • CloudWatch",
     },
     {
-      title: "AWS Landing Zone Lab Project",
-      desc: "Built a secure multi-account AWS landing zone environment with governance controls and centralized logging.",
-      icon: <span>☁️</span>
+      title: "Kubernetes CI/CD Platform",
+      desc: "Built automated deployment pipelines using Docker, Kubernetes, Jenkins, and GitHub Actions.",
+      tech: "Kubernetes • Jenkins • Docker • GitHub Actions",
+    },
+    {
+      title: "Azure Identity & Security Lab",
+      desc: "Implemented Microsoft Entra ID, Conditional Access, Defender XDR, and Purview controls.",
+      tech: "Azure • Entra ID • Defender XDR • Purview",
     },
     {
       title: "Windows Server Infrastructure Lab",
-      desc: "Configured AD DS, DNS, DHCP, Hyper-V, WSUS, and WDS services using PowerShell.",
-      icon: <span>🖥️</span>
-    }
+      desc: "Built a 3-server enterprise lab with Active Directory, DNS, DHCP, Hyper-V, and PowerShell automation.",
+      tech: "Windows Server • AD DS • DHCP • DNS • Hyper-V",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <nav className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur border-b border-slate-800">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="font-bold text-lg flex items-center gap-2">
-            <span>✨</span>
-            <span>Temesgen Portfolio</span>
-          </div>
-          <div className="flex gap-6 text-sm font-medium">
-            <a href="#profile" className="hover:text-blue-400">Profile</a>
-            <a href="#skills" className="hover:text-blue-400">Skills</a>
-            <a href="#projects" className="hover:text-blue-400">Projects</a>
-            <a href="#education" className="hover:text-blue-400">Education</a>
-          </div>
+    <div className="min-h-screen bg-slate-950 text-white">
+      
+      {/* 1. PROFILE SECTION */}
+      <motion.section
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center py-24 px-6 border-b border-slate-800"
+      >
+        <h2 className="text-3xl font-bold mb-6">1. Profile Section</h2>
+        <h1 className="text-5xl font-bold mb-4">Temesgen Meri 👋</h1>
+        <h2 className="text-3xl text-slate-300 mb-6 font-light">
+          Cloud & DevOps Engineer | AWS | Terraform | Kubernetes | CI/CD
+        </h2>
+        <p className="max-w-3xl mx-auto text-slate-400 text-lg">
+          Cloud and DevOps engineer focused on building secure AWS landing zones,
+          Kubernetes platforms, CI/CD pipelines, and infrastructure automation.
+        </p>
+
+        <div className="mt-8 flex justify-center gap-4 flex-wrap">
+          <a
+            href="https://github.com/tmeri23"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-white text-black rounded-xl font-semibold"
+          >
+            View GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/temesgen-meri/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 border border-slate-600 rounded-xl"
+          >
+            Connect on LinkedIn
+          </a>
+
+          <a
+            href="/Temesgen_Meri_Cloud_DevOps_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-blue-600 rounded-xl font-semibold"
+          >
+            Download Resume
+          </a>
         </div>
-      </nav>
+      </motion.section>
 
-      <section id="profile" className="max-w-6xl mx-auto px-6 py-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="text-5xl font-bold">Temesgen Meri</h1>
-          <p className="text-2xl text-blue-400 mt-3">Cloud Computing Student | Future Cloud &amp; DevOps Engineer</p>
-          <p className="mt-6 text-slate-300 leading-8 max-w-3xl text-lg">
-            Motivated Cloud Computing student at George Brown College with a strong focus on cloud infrastructure,
-            DevOps automation, and enterprise IT operations. This portfolio highlights academic preparation,
-            technical skills, hands-on projects, and professional development aligned with cloud computing and
-            modern DevOps practices.
-          </p>
-          <div className="mt-8 flex gap-4">
-            <button className="px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 shadow-xl">
-              <a href="/Temesgen_Meri_Resume.pdf" target="_blank" rel="noopener noreferrer">
-  </a>
-              Download Resume
-            </button>
-          </div>
-          <div className="mt-8 flex gap-6 text-slate-300">
-            <span className="text-xl">GitHub</span>
-            <span className="text-xl">LinkedIn</span>
-            <span className="text-xl">Email</span>
-          </div>
-        </motion.div>
-      </section>
-
-      <section id="skills" className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">Technical Skills &amp; Resume Highlights</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {Object.entries(skills).map(([category, items]) => (
-            <motion.div
-              key={category}
-              whileHover={{ scale: 1.02 }}
-              className="bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-800"
+      {/* 2. SKILLS SECTION */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-3xl font-bold mb-8">2. Skills Section</h2>
+        <div className="flex flex-wrap gap-3">
+          {skills.map((skill) => (
+            <motion.span
+              key={skill}
+              whileHover={{ scale: 1.1 }}
+              className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700"
             >
-              <h3 className="text-xl font-semibold mb-4">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {items.map((item) => (
-                  <span key={item} className="px-3 py-1 rounded-full bg-slate-800 text-sm">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              {skill}
+            </motion.span>
           ))}
         </div>
       </section>
 
-      <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">Work Samples &amp; GitHub Portfolio</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+      {/* 3. WORK SAMPLES SECTION */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-3xl font-bold mb-8">
+          3. Work Samples Section
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project) => (
             <motion.div
               key={project.title}
-              whileHover={{ y: -6 }}
-              className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-2xl"
+              whileHover={{ scale: 1.05 }}
+              className="bg-slate-900 rounded-2xl p-8 border border-slate-800"
             >
-              <div className="mb-4 text-blue-400 text-2xl">{project.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-slate-300">{project.desc}</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {project.title}
+              </h3>
+              <p className="text-slate-400 mb-4">{project.desc}</p>
+              <p className="text-slate-500 text-sm">{project.tech}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      <section id="education" className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">Education, Certifications &amp; Acknowledgements</h2>
-        <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-2xl">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-blue-400 text-xl">🏆</span>
-            <h3 className="text-xl font-semibold">George Brown College</h3>
-          </div>
-          <p className="text-slate-300">Cloud Computing Program | Expected Graduation: 2027</p>
-          <p className="text-slate-300 mt-4">
-            Certifications include Microsoft Purview, Microsoft Defender XDR, Microsoft Learn badges, and cloud infrastructure labs.
-          </p>
+      {/* 4. EDUCATION & ACKNOWLEDGEMENTS */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-3xl font-bold mb-8">
+          4. Education & Acknowledgements Section
+        </h2>
+
+        <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+          <ul className="space-y-3 text-slate-300">
+            <li>George Brown College – Cloud Computing Program</li>
+            <li>Microsoft Defender XDR Fundamentals</li>
+            <li>Microsoft Purview Compliance</li>
+            <li>AWS Bedrock Labs</li>
+            <li>Cloud Infrastructure Projects</li>
+          </ul>
         </div>
       </section>
 
-      <footer className="border-t border-slate-800 mt-16">
-        <div className="max-w-6xl mx-auto px-6 py-10">
-          <h2 className="text-2xl font-bold mb-4">Contact &amp; Navigation</h2>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <a href="#profile" className="hover:text-blue-400">Profile</a>
-            <a href="#skills" className="hover:text-blue-400">Skills</a>
-            <a href="#projects" className="hover:text-blue-400">Work Samples</a>
-            <a href="#education" className="hover:text-blue-400">Education</a>
-          </div>
-          <p className="text-slate-400 mt-6">
-            Designed and developed by Temesgen Meri | Cloud Computing Digital Portfolio | Prepared for academic assessment and Cloud / DevOps career opportunities
+      {/* 5. OVERALL IMPRESSION */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-3xl font-bold mb-8">
+          5. Overall Impression
+        </h2>
+
+        <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+          <p className="text-slate-300">
+            This digital portfolio is designed with a professional,
+            modern layout, clear section structure, responsive design,
+            and recruiter-ready project presentation.
           </p>
         </div>
-      </footer>
+      </section>
     </div>
   );
 }
+
+export default App;
