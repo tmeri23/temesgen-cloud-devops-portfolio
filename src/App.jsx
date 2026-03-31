@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+
 function App() {
   const skills = [
     "AWS",
@@ -194,15 +194,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
