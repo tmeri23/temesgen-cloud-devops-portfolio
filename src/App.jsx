@@ -1,3 +1,4 @@
+import profilePic from "./assets/profile.jpg";
 import { motion } from "framer-motion";
 import React from "react";
 function App() {
@@ -64,6 +65,19 @@ function App() {
           </a>
         </div>
       </motion.section>
+
+      <div className="flex flex-col items-center text-center py-10">
+        <img
+          src={profilePic}
+          alt="Temesgen Meri"
+          className="w-40 h-40 rounded-full object-cover shadow-lg mb-4"
+        />
+
+        <h1 className="text-4xl font-bold">Temesgen Meri 👋</h1>
+        <p className="text-xl mt-2">
+          Cloud & DevOps Engineer | AWS | Terraform | Kubernetes | CI/CD
+        </p>
+      </div>
 
       {/* Featured Enterprise Projects - moved up for recruiters */}
       <section className="max-w-6xl mx-auto py-20 px-6">
