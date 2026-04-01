@@ -1,6 +1,26 @@
 import { motion } from "framer-motion";
 import React from "react";
 import profilePic from "./assets/profile.jpg";
+
+<div className="flex flex-col items-center text-center py-12">
+  <img
+    src={profilePic}
+    alt="Temesgen Meri"
+    className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 border-4 border-white"
+  />
+
+  <h1 className="text-4xl font-bold">Temesgen Meri 👋</h1>
+
+  <p className="text-xl mt-3">
+    Cloud & DevOps Engineer | AWS | Terraform | Kubernetes | CI/CD
+  </p>
+
+  <p className="mt-4 max-w-2xl text-lg">
+    Building secure cloud infrastructure, enterprise landing zones,
+    Kubernetes platforms, and automated CI/CD pipelines.
+  </p>
+</div>
+
 function App() {
   const skills = [
     "AWS",
