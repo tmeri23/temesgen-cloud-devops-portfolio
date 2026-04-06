@@ -15,28 +15,30 @@ function App() {
     "Python",
     "PowerShell",
     "Linux",
+    "Prometheus",
+    "Grafana",
   ];
 
   const projects = [
     {
       title: "AWS Enterprise Landing Zone",
-      desc: "Designed and deployed a secure multi-account AWS landing zone using AWS Organizations, Service Control Policies (SCPs), IAM governance, centralized CloudWatch logging, VPC networking, and reusable Terraform modules.",
+      desc: "Designed and deployed a secure multi-account AWS landing zone using AWS Organizations, SCPs, IAM governance, centralized CloudWatch logging, VPC networking, and reusable Terraform modules.",
       tech: "AWS • Terraform • IAM • SCP • VPC • CloudWatch",
     },
     {
       title: "Kubernetes CI/CD Platform",
-      desc: "Built an automated deployment pipeline using Docker, Kubernetes, Jenkins, and GitHub Actions to streamline application releases, infrastructure validation, and zero-downtime deployments.",
-      tech: "Kubernetes • Jenkins • Docker • GitHub Actions • CI/CD",
+      desc: "Built automated deployment pipelines using Docker, Kubernetes, Jenkins, and GitHub Actions to enable zero-downtime releases.",
+      tech: "Kubernetes • Jenkins • Docker • GitHub Actions",
     },
     {
       title: "Azure Identity & Security Lab",
-      desc: "Implemented Microsoft Entra ID, Conditional Access, Defender XDR, and Purview compliance controls to simulate enterprise identity governance and security monitoring.",
+      desc: "Implemented Microsoft Entra ID, Conditional Access, Defender XDR, and Purview compliance controls.",
       tech: "Azure • Entra ID • Defender XDR • Purview",
     },
     {
       title: "Windows Server Infrastructure Lab",
-      desc: "Built a 3-server enterprise lab environment with Active Directory, DNS, DHCP, Hyper-V Replica, WDS, iSCSI storage, and Group Policy automation across multiple virtual machines.",
-      tech: "Windows Server • AD DS • DHCP • DNS • Hyper-V • PowerShell",
+      desc: "Built enterprise lab environment with AD DS, DNS, DHCP, Hyper-V Replica, WDS, and Group Policy automation.",
+      tech: "Windows Server • AD DS • DNS • DHCP",
     },
   ];
 
@@ -47,11 +49,11 @@ function App() {
     },
     {
       title: "⚙️ DevOps Automation",
-      text: "Experience building CI/CD pipelines, infrastructure automation, deployment workflows, and enterprise lab environments.",
+      text: "Experience building CI/CD pipelines, infrastructure automation, and deployment workflows.",
     },
     {
       title: "🚀 Growth Mindset",
-      text: "Continuously learning enterprise cloud technologies and applying them through hands-on labs and real-world simulations.",
+      text: "Continuously learning enterprise cloud technologies and applying them through real-world projects.",
     },
   ];
 
@@ -59,7 +61,7 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-white">
       {/* Hero */}
       <motion.section
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-center py-24 px-6 border-b border-slate-800"
@@ -76,14 +78,11 @@ function App() {
           Cloud & DevOps Engineer | AWS | Terraform | Kubernetes | CI/CD
         </h2>
 
-        <p className="max-w-3xl mx-auto text-slate-400 text-lg">
-          Cloud and DevOps engineer focused on building secure AWS landing zones,
-          Kubernetes platforms, CI/CD pipelines, and infrastructure automation
-          using Terraform, Docker, Jenkins, and GitHub Actions.
-        </p>
-
-        <p className="mt-6 text-slate-400">
-          Open to Cloud, DevOps, and Infrastructure Engineering roles
+        <p className="max-w-3xl mx-auto text-slate-400 text-lg leading-8">
+          Aspiring Cloud and DevOps Engineer with hands-on experience in AWS,
+          Azure, GCP, Terraform, Docker, Kubernetes, and CI/CD automation.
+          Currently building production-ready cloud solutions focused on
+          scalability, security, and infrastructure automation.
         </p>
 
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
@@ -93,7 +92,7 @@ function App() {
             rel="noopener noreferrer"
             className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition"
           >
-            View GitHub
+            GitHub
           </a>
 
           <a
@@ -102,7 +101,7 @@ function App() {
             rel="noopener noreferrer"
             className="px-6 py-3 border border-slate-600 rounded-xl hover:bg-slate-800 transition"
           >
-            Connect on LinkedIn
+            LinkedIn
           </a>
 
           <a
@@ -111,12 +110,12 @@ function App() {
             rel="noopener noreferrer"
             className="px-6 py-3 bg-blue-600 rounded-xl font-semibold hover:scale-105 transition"
           >
-            Download Resume
+            Resume
           </a>
         </div>
       </motion.section>
 
-      {/* Featured Projects */}
+      {/* Projects */}
       <section className="max-w-6xl mx-auto py-20 px-6">
         <h2 className="text-3xl font-bold mb-8">
           Featured Enterprise Projects
@@ -126,8 +125,8 @@ function App() {
           {projects.map((project) => (
             <motion.div
               key={project.title}
-              whileHover={{ scale: 1.05, y: -8 }}
-              className="bg-slate-900 rounded-2xl p-8 border border-slate-800 hover:shadow-2xl transition"
+              whileHover={{ scale: 1.03, y: -6 }}
+              className="bg-slate-900 rounded-2xl p-8 border border-slate-800"
             >
               <h3 className="text-xl font-semibold mb-4">
                 {project.title}
@@ -147,8 +146,8 @@ function App() {
           {skills.map((skill) => (
             <motion.span
               key={skill}
-              whileHover={{ scale: 1.1 }}
-              className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 hover:bg-slate-700 transition"
+              whileHover={{ scale: 1.08 }}
+              className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700"
             >
               {skill}
             </motion.span>
@@ -156,15 +155,23 @@ function App() {
         </div>
       </section>
 
-      {/* About */}
+      {/* Education */}
       <section className="max-w-6xl mx-auto py-20 px-6">
-        <h2 className="text-3xl font-bold mb-8">About Me</h2>
+        <h2 className="text-3xl font-bold mb-8">
+          Education & Certifications
+        </h2>
 
         <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-          <p className="text-slate-300">
-            Cloud and DevOps engineer focused on AWS, Azure, GCP, Terraform,
-            Kubernetes, Docker, and CI/CD automation.
+          <p className="text-slate-300 mb-4">
+            <strong>George Brown College</strong> — Cloud Computing Program
           </p>
+
+          <ul className="space-y-3 text-slate-300">
+            <li>AWS Bedrock Agents Learning Labs</li>
+            <li>Microsoft Defender XDR Fundamentals</li>
+            <li>Microsoft Purview Compliance</li>
+            <li>Kubernetes / Terraform Learning Path</li>
+          </ul>
         </div>
       </section>
 
@@ -176,7 +183,7 @@ function App() {
           {whyHireMe.map((item) => (
             <motion.div
               key={item.title}
-              whileHover={{ scale: 1.05, y: -8 }}
+              whileHover={{ scale: 1.03, y: -6 }}
               className="bg-slate-900 rounded-2xl p-8 border border-slate-800"
             >
               <h3 className="text-xl font-semibold mb-4">
@@ -188,21 +195,35 @@ function App() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="max-w-6xl mx-auto py-20 px-6">
-        <h2 className="text-3xl font-bold mb-8">
-          Certifications & Learning
-        </h2>
+      {/* Footer */}
+      <footer className="bg-black py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-4">Let’s Connect</h2>
 
-        <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-          <ul className="space-y-3 text-slate-300">
-            <li>Microsoft Defender XDR Fundamentals</li>
-            <li>Microsoft Purview Compliance & Data Governance</li>
-            <li>AWS Bedrock Agents Learning Labs</li>
-            <li>Cloud Computing Program – George Brown College</li>
-          </ul>
+        <p className="text-slate-400 mb-6">
+          Open to Cloud Engineer, DevOps Engineer, and Infrastructure roles
+        </p>
+
+        <div className="flex justify-center gap-4 flex-wrap">
+          <a
+            href="mailto:temesgen.meri@example.com"
+            className="px-6 py-3 border border-slate-600 rounded-xl"
+          >
+            Email Me
+          </a>
+
+          <a
+            href="https://github.com/tmeri23"
+            target="_blank"
+            className="px-6 py-3 border border-slate-600 rounded-xl"
+          >
+            GitHub
+          </a>
         </div>
-      </section>
+
+        <p className="text-slate-600 mt-8 text-sm">
+          © 2026 Temesgen Meri | Cloud & DevOps Portfolio
+        </p>
+      </footer>
     </div>
   );
 }
