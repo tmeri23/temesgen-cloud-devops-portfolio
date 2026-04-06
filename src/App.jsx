@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import profilePic from "./assets/profile.jpg";
+import profilePic from "./assets/profile1.jpg";
 
 function App() {
   const skills = [
