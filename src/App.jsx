@@ -156,21 +156,63 @@ function App() {
       </section>
 
       {/* Education */}
-      <section className="max-w-6xl mx-auto py-20 px-6">
+      <section id="education" className="max-w-6xl mx-auto py-20 px-6">
         <h2 className="text-3xl font-bold mb-8">
           Education & Certifications
         </h2>
 
         <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-          <p className="text-slate-300 mb-4">
-            <strong>George Brown College</strong> — Cloud Computing Program
-          </p>
+          <ul className="space-y-4 text-slate-300">
 
-          <ul className="space-y-3 text-slate-300">
-            <li>AWS Bedrock Agents Learning Labs</li>
-            <li>Microsoft Defender XDR Fundamentals</li>
-            <li>Microsoft Purview Compliance</li>
-            <li>Kubernetes / Terraform Learning Path</li>
+            <li>
+              <a
+                href="https://www.georgebrown.ca/programs/cloud-computing-technologies-program-postgraduate-t465"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 hover:underline transition"
+              >
+                George Brown College — Cloud Computing Program
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://besa.techcreator.io/badges?__clerk_synced=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 hover:underline transition"
+              >
+                AWS Bedrock Agents Learning Labs
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://learn.microsoft.com/en-us/training/modules/describe-threat-protection-with-microsoft-365-defender/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 hover:underline transition"
+              >
+                Microsoft Defender XDR Fundamentals
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://learn.microsoft.com/en-us/training/modules/describe-purview-risk-compliance-governance/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 hover:underline transition"
+              >
+                Microsoft Purview Compliance
+              </a>
+            </li>
+
+            <li>
+              <span className="text-slate-400">
+                Kubernetes / Terraform Learning Path
+              </span>
+            </li>
           </ul>
         </div>
       </section>
