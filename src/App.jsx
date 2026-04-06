@@ -247,7 +247,7 @@ function App() {
 
         <div className="flex justify-center gap-4 flex-wrap">
           <a
-            href="mailto:temesgen.meri@example.com"
+            href="mailto:temesgen.meri@georgebrown.ca"
             className="px-6 py-3 border border-slate-600 rounded-xl"
           >
             Email Me
