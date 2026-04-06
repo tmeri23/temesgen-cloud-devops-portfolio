@@ -188,7 +188,7 @@ function App() {
 
             <li>
               <a
-                href="https://besa.techcreator.io/certification/temesgenmeri0258992/agentic-ai-on-aws-besa-398323"
+                href="https://learn.microsoft.com/en-us/training/modules/describe-threat-protection-with-microsoft-365-defender/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 hover:underline transition"
